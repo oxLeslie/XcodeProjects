@@ -9,7 +9,7 @@
 import Foundation
 import AppKit
 
-class Project: Identifiable, Codable {
+class Project: Identifiable, Codable, Hashable {
 
     var id: UUID = UUID()
     var name: String
@@ -29,6 +29,14 @@ class Project: Identifiable, Codable {
         }
         let splitName = name.split(separator: "-").last ?? name
         self.init(name: String(splitName), path: url.path)
+    }
+    
+    static func == (lhs: Project, rhs: Project) -> Bool {
+        lhs.path == rhs.path
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(path)
     }
 }
 

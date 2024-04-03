@@ -37,4 +37,8 @@ class StatusViewController: NSViewController {
         view.addSubview(hoster.view)
     }
     
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        preferences.updateBranchs()
+    }
 }

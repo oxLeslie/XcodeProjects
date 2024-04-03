@@ -9,8 +9,10 @@
 import SwiftUI
 
 struct ProjectNameView: View {
+    
     let project: Project
     @EnvironmentObject var preferences: Preferences
+    @ObservedObject var branch: Branch
 
     var body: some View {
         HStack {
@@ -23,10 +25,14 @@ struct ProjectNameView: View {
             }
 
             Text(self.project.name)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 5))
+                .padding([.trailing], 5)
+            
+            Spacer()
+            
+            Text(self.branch.name)
+                .padding([.trailing], 5)
            
             // open project
-            Spacer()
             Button(action: {
                 AppDelegate.closePopover()
                 NSWorkspace.execute(command: .openWorkspace, forProject: self.project)
@@ -60,6 +66,6 @@ struct ProjectNameView: View {
 
 struct ProjectNameView_Previews: PreviewProvider {
     static var previews: some View {
-        ProjectNameView(project: Project.dummy)
+        ProjectNameView(project: Project.dummy, branch: Branch(path: ""))
     }
 }

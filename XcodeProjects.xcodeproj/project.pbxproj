@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31BF54B52BBD558B009F5E76 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31BF54B42BBD558B009F5E76 /* Branch.swift */; };
 		6EC78A69286C7167007F453C /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC78A68286C7167007F453C /* Alias.swift */; };
 		6EC78A6B286C7808007F453C /* AliasCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC78A6A286C7808007F453C /* AliasCell.swift */; };
 		6EC78A6D286C9E72007F453C /* ProfileFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC78A6C286C9E72007F453C /* ProfileFile.swift */; };
@@ -84,6 +85,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		31BF54B42BBD558B009F5E76 /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		6EC78A68286C7167007F453C /* Alias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alias.swift; sourceTree = "<group>"; };
 		6EC78A6A286C7808007F453C /* AliasCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AliasCell.swift; sourceTree = "<group>"; };
 		6EC78A6C286C9E72007F453C /* ProfileFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFile.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 				C8DB027127C6DD860048157A /* CustomCommand.swift */,
 				C8573C48249E77E400E1F969 /* TerminalScript.swift */,
 				6EC78A68286C7167007F453C /* Alias.swift */,
+				31BF54B42BBD558B009F5E76 /* Branch.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				C8D9F49425FCCE61004C952C /* ProjectPreferencesView.swift in Sources */,
 				6EE2479C2A61669700DC2B4A /* AliasNameView.swift in Sources */,
 				C8D9F49725FCCE80004C952C /* ProjectPreferencesViewController.swift in Sources */,
+				31BF54B52BBD558B009F5E76 /* Branch.swift in Sources */,
 				C8BE992424CA1732000D4E5E /* NSColor+Codable.swift in Sources */,
 				C8412E2A24129B4F0066A8A5 /* AppDelegate.swift in Sources */,
 				C8D9623824AD31F100B70B23 /* ArrowImageWithHoverPopover.swift in Sources */,

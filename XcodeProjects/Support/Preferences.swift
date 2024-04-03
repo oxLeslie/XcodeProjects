@@ -22,6 +22,7 @@ final class Preferences: ObservableObject {
     @Published private var _customTerminalCommands: [CustomCommand] = []
     @Published private var _aliases: [Alias] = []
     @Published private var _showAliases: Bool = UserDefaultsConfig.showAliases
+    @Published private var _branchs: [Project: Branch] = [:]
 
     // is used after podfile.lock file or project's derived data was called
     // in order not to show that menu for the project again
@@ -32,6 +33,7 @@ final class Preferences: ObservableObject {
         _projects = UserDefaultsConfig.projectObjects
         _customTerminalCommands = UserDefaultsConfig.customTerminalCommandObjects
         _aliases = ProfileFile.z.aliases + ProfileFile.bash.aliases + UserDefaultsConfig.aliasTerminalCommands
+        _projects.forEach({ _branchs[$0] = Branch(path: $0.path) })
     }
 
     private (set) var customTerminalCommands: [CustomCommand] {
@@ -135,6 +137,14 @@ extension Preferences {
 
     func toggleLaunchAtLogin() {
         launchAtLoginEnabled.toggle()
+    }
+    
+    func updateBranchs() {
+        _branchs.values.forEach({ $0.update() })
+    }
+    
+    func branch(_ project: Project) -> Branch {
+        _branchs[project]!
     }
 }
 

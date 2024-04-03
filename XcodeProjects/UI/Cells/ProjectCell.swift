@@ -16,7 +16,7 @@ struct ProjectCell: View {
         VStack {
             HStack(spacing: 0) {
                 
-                ProjectNameView(project: self.project)
+                ProjectNameView(project: self.project, branch: preferences.branch(project))
                     .environmentObject(preferences)
 
                 Divider()

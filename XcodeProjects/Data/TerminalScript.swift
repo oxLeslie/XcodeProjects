@@ -15,7 +15,7 @@ struct TerminalScript {
         let scriptText =
         """
         tell application "Terminal"
-        if not (exists window 1) then reopen
+        reopen
         activate
         \(command)
         end tell
